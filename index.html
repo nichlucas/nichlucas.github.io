@@ -3,67 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. [Your Name] | Cambridge PhD & UBC Postdoc</title>
+    <title>Dr. Nicholas Lucas </title>
     <style>
         :root {
-            --cambridge-blue: #A3C1AD; /* Traditional Cambridge Blue */
-            --oxford-blue: #002147;    /* Deep Professional Blue */
-            --slate: #333;
-            --light-grey: #f4f4f4;
+            --oxford-blue: #002147;
+            --cambridge-blue: #A3C1AD;
+            --glass-white: rgba(255, 255, 255, 0.7);
+            --text-main: #2c3e50;
         }
-        body { font-family: 'Georgia', serif; line-height: 1.6; color: var(--slate); margin: 0; padding: 0; }
-        header { background: var(--oxford-blue); color: white; padding: 3rem 1rem; text-align: center; }
-        .container { max-width: 800px; margin: auto; padding: 2rem; }
-        h1 { margin: 0; font-size: 2.5rem; letter-spacing: 1px; }
-        .subtitle { font-style: italic; color: var(--cambridge-blue); font-size: 1.2rem; }
-        .section { margin-bottom: 3rem; border-bottom: 1px solid #eee; padding-bottom: 1rem; }
-        h2 { color: var(--oxford-blue); text-transform: uppercase; font-size: 1.2rem; border-left: 4px solid var(--cambridge-blue); padding-left: 10px; }
-        table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
-        th, td { text-align: left; padding: 12px; border-bottom: 1px solid #ddd; }
-        th { background-color: var(--light-grey); }
-        .cta-box { background: var(--light-grey); padding: 2rem; border-radius: 8px; text-align: center; border: 1px solid #ddd; }
-        .btn { background: var(--oxford-blue); color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            background: #f8f9fa; /* Clean light grey background */
+        }
+
+        /* Layout Container */
+        .wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Top Header Area */
+        header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 50px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 30px;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--oxford-blue);
+        }
+
+        .header-text h1 {
+            margin: 0;
+            color: var(--oxford-blue);
+            font-size: 2.5rem;
+        }
+
+        .header-text p {
+            margin: 5px 0;
+            font-style: italic;
+            color: #666;
+        }
+
+        /* Section Styling */
+        h2 {
+            color: var(--oxford-blue);
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            margin-top: 40px;
+        }
+
+        /* Dropdowns (Accordions) with Semi-Transparency */
+        .accordion {
+            background: var(--glass-white);
+            backdrop-filter: blur(10px); /* The "Glass" effect */
+            -webkit-backdrop-filter: blur(10px);
+            color: var(--text-main);
+            cursor: pointer;
+            padding: 20px;
+            width: 100%;
+            text-align: left;
+            border: 1px solid rgba(255,255,255,0.3);
+            outline: none;
+            transition: 0.3s;
+            font-weight: bold;
+            margin-top: 10px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .accordion:after {
+            content: '\002B'; /* Plus sign */
+            font-size: 1.2rem;
+        }
+
+        .active:after {
+            content: "\2212"; /* Minus sign */
+        }
+
+        .active, .accordion:hover {
+            background: rgba(163, 193, 173, 0.3); /* Transparent Cambridge Blue */
+        }
+
+        .panel {
+            padding: 0 20px;
+            background: rgba(255, 255, 255, 0.4);
+            display: none;
+            overflow: hidden;
+            border-radius: 0 0 10px 10px;
+            border-left: 3px solid var(--cambridge-blue);
+        }
+
+        /* Research Images */
+        .research-img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 5px;
+            display: block;
+        }
+
+        /* Contact Box */
+        .contact-card {
+            background: var(--oxford-blue);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .contact-card a {
+            color: var(--cambridge-blue);
+            text-decoration: none;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Dr. [Your Name]</h1>
-    <p class="subtitle">Cambridge PhD • UBC Postdoctoral Fellow • Engineering Specialist</p>
-</header>
+<div class="wrapper">
+    <header>
+        <!-- Ensure you upload a file named profile.jpg to GitHub -->
+        <img src="profile.jpg" alt="Dr. Name" class="profile-pic">
+        <div class="header-text">
+            <h1>Dr. [Your Name]</h1>
+            <p>PhD (Cambridge) • Postdoctoral Fellow (UBC) • B.Eng.</p>
+            <p>Specialist in Metamorphic Petrology & Computational Metallurgy</p>
+        </div>
+    </header>
 
-<div class="container">
-    <div class="section">
-        <h2>Academic Profile</h2>
-        <p>Expertise bridging **Metamorphic Petrology** and **Computational Metallurgy**. Providing elite educational support for advanced STEM and university admissions.</p>
-    </div>
+    <section>
+        <h2>Research Portfolio</h2>
+        
+        <button class="accordion">Metamorphic Petrology & Tectonics</button>
+        <div class="panel">
+            <p>Your PhD research summary here. Discussing the interplay of thermal and mechanical processes in the Earth's crust.</p>
+            <img src="research1.jpg" alt="Research Image 1" class="research-img">
+        </div>
 
-    <div class="section">
-        <h2>Specialized Tutoring</h2>
-        <table>
-            <tr><th>Tier</th><th>Subjects</th><th>Target</th></tr>
-            <tr><td>Advanced STEM</td><td>Thermodynamics, Metallurgy, Physics</td><td>UBC/SFU Students</td></tr>
-            <tr><td>Elite Prep</td><td>AP/IB Math & Chemistry</td><td>High School (Kits/West Side)</td></tr>
-            <tr><td>Admissions</td><td>Oxbridge & Ivy League Coaching</td><td>Academic Candidates</td></tr>
-        </table>
-    </div>
+        <button class="accordion">Computational Metallurgy & Materials Modeling</button>
+        <div class="panel">
+            <p>Current UBC postdoctoral research focus on multiscale modeling of alloy systems.</p>
+            <img src="research2.jpg" alt="Research Image 2" class="research-img">
+        </div>
+    </section>
 
-    <div class="section">
-        <h2>Education</h2>
+    <section>
+        <h2>Elite Academic Consulting</h2>
+        <p>I provide premium tutoring for advanced undergraduate engineering, graduate-level geology, and competitive university admissions coaching.</p>
         <ul>
-            <li><strong>Postdoctoral Fellow</strong> – Computational Metallurgy, UBC[cite: 1]</li>
-            <li><strong>PhD</strong> – Metamorphic Petrology & Tectonics, University of Cambridge[cite: 1]</li>
-            <li><strong>B.Eng.</strong> – Bachelor of Engineering[cite: 1]</li>
+            <li>Thermodynamics & Phase Equilibria</li>
+            <li>Computational Simulation (Python/Matlab)</li>
+            <li>Oxbridge Interview Mentorship</li>
         </ul>
-    </div>
+    </section>
 
-    <div class="cta-box">
-        <h3>Inquire for Availability</h3>
-        <p>Bespoke mentorship for serious candidates.</p>
-        <p><strong>Email:</strong> [Your Email Address]</p>
-        <a href="mailto:[Your Email]" class="btn">Contact Me</a>
+    <div class="contact-card">
+        <h3>Direct Inquiry</h3>
+        <p>Currently accepting a limited number of private students in Vancouver (Kitsilano/UBC) and worldwide via Zoom.</p>
+        <p>Email: <a href="mailto:your-email@ubc.ca">your-email@ubc.ca</a></p>
     </div>
 </div>
+
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    for (var i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+</script>
 
 </body>
 </html>
