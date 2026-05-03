@@ -132,6 +132,39 @@
         ul {
             padding-left: 20px;
         }
+
+/* Mobile Adaptations */
+@media (max-width: 768px) {
+    .header-top {
+        flex-direction: column !important; /* Stacks photo on top of name */
+        text-align: center;
+        gap: 15px;
+    }
+
+    .header-text h1 {
+        font-size: 1.8rem; /* Slightly smaller name for mobile screens */
+    }
+
+    .nav-tabs {
+        flex-direction: column; /* Stacks Home/Research tabs vertically */
+        gap: 5px;
+    }
+
+    .tab-link {
+        width: 100%; /* Makes tabs full-width buttons for easier tapping */
+        padding: 12px 0;
+        text-align: center;
+        border: 1px solid #eee;
+    }
+
+    .wrapper {
+        padding: 20px 15px; /* Reduces side padding so text isn't too narrow */
+    }
+
+    .contact-card {
+        padding: 30px 15px; /* Slightly tighter padding for small screens */
+    }
+}
     </style>
 </head>
 <body>
