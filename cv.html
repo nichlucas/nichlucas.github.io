@@ -54,24 +54,6 @@
             margin-bottom: 25px;
         }
 
-        .entry-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            font-size: 1.2rem;
-            font-weight: 400;
-            color: var(--text-dark);
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .sub-entry {
-            display: flex;
-            justify-content: space-between;
-            font-style: italic;
-            color: var(--text-light);
-            margin-bottom: 0px;
-        }
-
         ul {
             padding-left: 20px;
             margin-top: 5px;
@@ -104,8 +86,8 @@
         .experience-entry {
             margin-bottom: 30px;
         }
-
-        .experience-header {
+        
+        .all-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
@@ -114,10 +96,12 @@
             font-family: 'Montserrat', sans-serif;
         }
 
-        .experience-sub {
+         .all-sub {
+            display: flex;
+            justify-content: space-between;
             font-style: italic;
             color: var(--text-light);
-            margin-bottom: 8px;
+            margin-bottom: 0px;
         }
 
         .experience-entry ul {
@@ -126,7 +110,7 @@
         }
 
         @media (max-width: 600px) {
-            .entry-header, .sub-entry, .experience-header {
+            .all-header, .all-sub, .experience-header {
                 flex-direction: column;
             }
         }
@@ -137,47 +121,44 @@
 <div class="wrapper">
     <h2>Education</h2>
     <div class="cv-section">
-        <div class="entry-header">
+        <div class="all-header">
             <span>Doctor of Philosophy in Earth Sciences</span>
             <span>2021–2025</span>
         </div>
-        <div class="sub-entry">
+        <div class="all-sub">
             <span>University of Cambridge, UK</span>
         </div>
     </div>
 
     <div class="cv-section">
-        <div class="entry-header">
+        <div class="all-header">
             <span>Bachelor of Applied Science, Geological Engineering</span>
             <span>2017–2021</span>
         </div>
-        <div class="sub-entry">
+        <div class="all-sub">
             <span>Queen’s University, Kingston, Ontario, Canada</span>
-            <span>CGPA: 4.0/4.3</span>
         </div>
     </div>
 
     <section>
         <h2>Relevant Experience</h2>
-
         <div class="experience-entry">
-            <div class="experience-header">
+            <div class="all-header">
                 <span>Postdoctoral Research Fellow</span>
                 <span>April 2026 – Present</span>
             </div>
-            <div class="experience-sub">University of British Columbia, Canada</div>
+            <div class="all-sub">University of British Columbia, Canada</div>
             <ul>
-                <li>Leading research on phase-field modelling of transformation kinetics and phase stability in bainitic steel.</li>
-                <li>Applying advanced microscopy and microanalysis techniques to characterisation challenges.</li>
+                <li>Studying the mechanisms of the bainite phase transformation in steel via phase field modelling methods.</li>
             </ul>
         </div>
             
         <div class="experience-entry">
-            <div class="experience-header">
+            <div class="all-header">
                 <span>Doctoral Researcher</span>
                 <span>2021 – 2025</span>
             </div>
-            <div class="experience-sub">University of Cambridge, UK</div>
+            <div class="all-sub">University of Cambridge, UK</div>
             <ul>
                 <li>Applied advanced thermodynamic techniques to determine how hot a mountain range was during its formation one billion years ago, highlighting issues with decades of thinking.</li>
                 <li>Published lead-author paper in a high-impact journal, overturning decades-old assumptions regarding a globally occurring geological processes relating to mountain building (doi: 10.1111/jmg.12801).</li>
@@ -185,11 +166,11 @@
         </div>
 
         <div class="experience-entry">
-            <div class="experience-header">
+            <div class="all-header">
                 <span>Undergraduate Supervisor</span>
                 <span>2021 – 2024</span>
             </div>
-            <div class="experience-sub">University of Cambridge, UK</div>
+            <div class="all-sub">University of Cambridge, UK</div>
             <ul>
                 <li>Taught three laboratory sessions per week (30 to 40 students) for first- and second-year Earth Sciences courses.</li>
                 <li>Supervised first to third-year students (1 to 4 per group) for up to 5 hours per week.</li>
@@ -197,11 +178,11 @@
         </div>
 
         <div class="experience-entry">
-            <div class="experience-header">
+            <div class="all-header">
                 <span>Operations Engineering Intern</span>
                 <span>May – Aug 2019</span>
             </div>
-            <div class="experience-sub">Ovintiv Inc., Alberta, Canada</div>
+            <div class="all-sub">Ovintiv Inc., Alberta, Canada</div>
             <ul>
                 <li>Led and supported various projects aimed at reducing operational risks for pipelines and natural gas and liquids processing facilities.</li>
             </ul>
