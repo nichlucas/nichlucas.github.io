@@ -32,6 +32,7 @@
 
         h1, h2, h3 {
             font-family: 'Montserrat', sans-serif;
+            font-weight: 100;
             color: var(--oxford-blue);
             margin-top: 1.5em;
             margin-bottom: 0.5em;
@@ -39,40 +40,36 @@
 
         h1 {
             font-size: 2rem;
-            font-weight: 700;
             letter-spacing: -1px;
             margin: 0;
         }
 
         h2 {
-            padding-bottom: 5px;
+            padding-bottom: 0px;
             font-size: 1.4rem;
             border-bottom: 2px solid #eee;
-            font-weight: 700;
-            text-transform: uppercase;
         }
 
         .cv-section {
             margin-bottom: 25px;
         }
 
-        /* Unified Header Styles for Education and Experience */
-        .entry-header, .experience-header {
+        .entry-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: var(--text-dark);
             font-family: 'Montserrat', sans-serif;
-            font-size: 1.15rem;
-            font-weight: 700;
-            color: var(--oxford-blue);
         }
 
-        .sub-entry, .experience-sub {
+        .sub-entry {
             display: flex;
             justify-content: space-between;
             font-style: italic;
             color: var(--text-light);
-            margin-bottom: 8px;
+            margin-bottom: 0px;
         }
 
         ul {
@@ -85,8 +82,12 @@
         }
 
         .publication {
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             font-size: 1rem;
+        }
+
+        .publication em {
+            color: var(--oxford-blue);
         }
 
         .pub-link {
@@ -96,15 +97,37 @@
         }
 
         .pub-link:hover {
-            font-weight: 600;
+            font-weight: bold;
+            color: inherit;
+        }
+
+        .experience-entry {
+            margin-bottom: 30px;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-weight: 700;
             color: var(--oxford-blue);
-            text-decoration: underline;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .experience-sub {
+            font-style: italic;
+            color: var(--text-light);
+            margin-bottom: 8px;
+        }
+
+        .experience-entry ul {
+            margin-top: 5px;
+            padding-left: 20px;
         }
 
         @media (max-width: 600px) {
-            .entry-header, .experience-header, .sub-entry {
+            .entry-header, .sub-entry, .experience-header {
                 flex-direction: column;
-                gap: 2px;
             }
         }
     </style>
@@ -112,7 +135,6 @@
 <body>
 
 <div class="wrapper">
-
     <h2>Education</h2>
     <div class="cv-section">
         <div class="entry-header">
@@ -141,12 +163,12 @@
         <div class="experience-entry">
             <div class="experience-header">
                 <span>Postdoctoral Research Fellow</span>
-                <span>2026 – Present</span>
+                <span>April 2026 – Present</span>
             </div>
             <div class="experience-sub">University of British Columbia, Canada</div>
             <ul>
-                <li>Applying deep scientific expertise to solve complex multi-disciplinary problems in metallurgy[cite: 2].</li>
-                <li>Utilizing technical versatility in modelling and characterisation to deliver tangible results[cite: 2].</li>
+                <li>Leading research on phase-field modelling of transformation kinetics and phase stability in bainitic steel.</li>
+                <li>Applying advanced microscopy and microanalysis techniques to characterisation challenges.</li>
             </ul>
         </div>
             
@@ -157,8 +179,8 @@
             </div>
             <div class="experience-sub">University of Cambridge, UK</div>
             <ul>
-                <li>Applied advanced thermodynamic techniques to determine thermal conditions of mountain range formation[cite: 2].</li>
-                <li>Published lead-author paper in a high-impact journal, overturning decades-old assumptions regarding mountain building (doi: 10.1111/jmg.12801)[cite: 2].</li>
+                <li>Applied advanced thermodynamic techniques to determine how hot a mountain range was during its formation one billion years ago, highlighting issues with decades of thinking.</li>
+                <li>Published lead-author paper in a high-impact journal, overturning decades-old assumptions regarding a globally occurring geological processes relating to mountain building (doi: 10.1111/jmg.12801).</li>
             </ul>
         </div>
 
@@ -169,8 +191,8 @@
             </div>
             <div class="experience-sub">University of Cambridge, UK</div>
             <ul>
-                <li>Taught laboratory sessions for up to 40 students per session across first- and second-year courses[cite: 2].</li>
-                <li>Provided direct supervision for small groups (1 to 4 students) for up to 5 hours per week[cite: 2].</li>
+                <li>Taught three laboratory sessions per week (30 to 40 students) for first- and second-year Earth Sciences courses.</li>
+                <li>Supervised first to third-year students (1 to 4 per group) for up to 5 hours per week.</li>
             </ul>
         </div>
 
@@ -181,7 +203,7 @@
             </div>
             <div class="experience-sub">Ovintiv Inc., Alberta, Canada</div>
             <ul>
-                <li>Led projects aimed at reducing operational risks for pipelines and natural gas processing facilities[cite: 2].</li>
+                <li>Led and supported various projects aimed at reducing operational risks for pipelines and natural gas and liquids processing facilities.</li>
             </ul>
         </div>
     </section>
@@ -189,37 +211,37 @@
     <h2>Awards & Grants</h2>
     <div class="cv-section">
         <ul>
-            <li>Teck CCSF Scholarship, Canadian Centennial Scholarship Fund (2022)[cite: 1]</li>
-            <li>Dean’s Scholar, Faculty of Engineering and Applied Science (2017–2021)[cite: 1]</li>
-            <li>David Woeller Scholarship, Geotechnical Engineering (2020)[cite: 1]</li>
+            <li>Teck CCSF Scholarship, Canadian Centennial Scholarship Fund (2022)</li>
+            <li>Dean’s Scholar, Faculty of Engineering and Applied Science (2017–2021)</li>
+            <li>David Woeller Scholarship for academic excellence in geotechnical engineering (2020)</li>
+            <li>J. Allan Donaldson Prize for research on Precambrian geology (2020)</li>
+            <li>J. J. Denny Memorial Scholarship for academic excellence in geological engineering (2019)</li>
         </ul>
         <p><strong>PhD Fieldwork & Laboratory Grants Recipient:</strong></p>
         <ul>
-            <li>Leave to Work Away Research Fund, Cambridge (£3130)[cite: 1]</li>
-            <li>Research Grant, Geological Society of London (£1500)[cite: 1]</li>
-            <li>Research Grant, Edinburgh Geological Society (£1000)[cite: 1]</li>
+            <li>Leave to Work Away Research Fund, Cambridge (£3130)</li>
+            <li>Research Grant, Geological Society of London (£1500)</li>
+            <li>Research Grant, Edinburgh Geological Society (£1000)</li>
         </ul>
     </div>
 
     <h2>Publications</h2>
     <div class="cv-section">
         <div class="publication">
-            <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/jmg.12801" class="pub-link">
-                Lucas, N., et al. (2025), The Diverse Habitats of Eclogite Formation: Insights From the Mesoproterozoic Glenelg Inlier, Scotland. <em>J Metamorph Geol</em>, 43: 97-122[cite: 1, 2].
-            </a>
+            <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/jmg.12801" class="pub-link">Lucas, N., Weller, O., Copley, A., Mottram, C., Chapman, G. and McMahon, W. (2025), The Diverse Habitats of Eclogite Formation: Insights From the Mesoproterozoic Glenelg Inlier, Scotland. J Metamorph Geol, 43: 97-122. https://doi.org/10.1111/jmg.12801</a>.
         </div>
         <div class="publication">
-            <strong>In preparation:</strong><br>
-            Lucas, N., et al. (2026), Not all orogenic interiors melt equally: the effects of H<sub>2</sub>O availability and metamorphic P-T conditions in the Grenville orogen, Canada[cite: 1].
+            <p><strong>In preparation:</strong></p>
+            Lucas, N., Weller, O., St-Onge, M., Copley, A. (2026), Not all orogenic interiors melt equally: the effects of H<sub>2</sub>O availability and metamorphic P-T conditions across a mid-crustal thermal plateau in the Mesoproterozoic Grenville orogen, Canada.
         </div>
     </div>
 
     <h2>Relevant Skills</h2>
     <div class="cv-section">
         <ul>
-            <li><strong>Software:</strong> MATLAB, Python, Excel, Theriak–Domino, Thermocalc, Magemin, MICRESS[cite: 1, 2]</li>
-            <li><strong>Core Strengths:</strong> Rapid learning, working with ambiguity, systems thinking, attention to detail[cite: 2]</li>
-            <li><strong>Languages:</strong> English (Fluent), French (Proficient)[cite: 1, 2]</li>
+            <li><strong>Microscopy:</strong> SEM (BSE/SE), EPMA, TEM, LA-ICP-MS</li>
+            <li><strong>Software:</strong> MATLAB, Python, HTML, LaTeX, Theriak-Domino, THERMOCALC, MICRESS</li>
+            <li><strong>Languages:</strong> English, French (proficient)</li>
         </ul>
     </div>
 </div>
