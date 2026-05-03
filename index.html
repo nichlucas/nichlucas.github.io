@@ -4,25 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Nicholas Lucas</title>
-    <!-- Updated Google Fonts link to include Bold (700) weight -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
     <style>
         :root {
             --oxford-blue: #002147;
             --cambridge-blue: #A3C1AD;
+            --text-dark: #333333;
+            --text-light: #666666;
             --glass-white: rgba(255, 255, 255, 0.7);
-            --text-main: #000000;
         }
 
-        /* Set body to Arial */
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.6;
-            color: var(--text-main);
+            font-family: 'Open Sans', Arial, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.7; 
+            background-color: #ffffff;
             margin: 0;
             padding: 0;
-            background: #ffffff;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: var(--oxford-blue);
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            letter-spacing: -1px;
+            margin: 0;
+        }
+
+        h2 {
+            border-bottom: 1px solid #eaeaea;
+            padding-bottom: 10px;
+            font-size: 1.4rem;
         }
 
         .wrapper {
@@ -31,19 +51,11 @@
             padding: 40px 20px;
         }
 
-        /* Headers: Montserrat Bold */
-        h1, h2, h3, .tab-link {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: bolder; 
-            color: var(--oxford-blue);
-        }
-
         header {
             display: flex;
-            flex-direction: column; /* Stacked layout for profile + text over tabs */
+            flex-direction: column;
             margin-bottom: 20px;
             border-bottom: 2px solid #eee;
-            padding-bottom: 0px;
         }
 
         .header-top {
@@ -55,82 +67,37 @@
 
         .profile-pic {
             height: 150px;
-            /* width: 150px; /* Force square */ */
+            width: 150px; /* Explicit width added */
             object-fit: cover;
-        }
-
-        .header-text h1 {
-            margin: 0;
-            font-size: 40px;
         }
 
         .header-text p {
             margin: 2px 0;
-            color: #666;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--text-light);
         }
 
-        /* Navigation Tabs at bottom of header */
         .nav-tabs {
             display: flex;
-            gap: 0px;
+            gap: 10px; /* Added unit */
         }
 
         .tab-link {
             text-decoration: none;
-            padding: 6px 25px;
+            padding: 8px 25px;
             font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 1px;
             color: var(--oxford-blue);
-            background: var(--glass-white);
-            border-radius: 0 0 0 0;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
             transition: 0.3s;
-            border: 1px solid #eee;
-            border-bottom: none;
-        }
-
-        .tab-link:hover {
-            background: var(--cambridge-blue);
-            color: white;
         }
 
         .active-tab {
             background: rgba(163, 193, 173, 0.5);
             border-top: 3px solid var(--oxford-blue);
-        }
-
-        /* Accordions remain for content sections */
-        .accordion {
-            background: var(--glass-white);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            color: #666;
-            cursor: pointer;
-            padding: 20px;
-            width: 100%;
-            text-align: left;
-            border: 0.5px solid #eee;
-            outline: none;
-            transition: 0.4s;
-            font-size: 1.1rem;
-            margin-top: 10px;
-            border-radius: 10px;
-            display: flex;
-            justify-content: space-between;
-            font-family: Arial, sans-serif; /* Keep button text simple */
-        }
-
-        .active, .accordion:hover {
-            background: rgba(163, 193, 173, 0.3);
-        }
-
-        .panel {
-            padding: 0 20px;
-            background: rgba(255, 255, 255, 0.4);
-            display: none;
-            overflow: hidden;
-            border-radius: 0 0 10px 10px;
-            border-left: 3px solid var(--cambridge-blue);
         }
 
         .contact-card {
@@ -146,6 +113,10 @@
             color: var(--cambridge-blue);
             text-decoration: none;
             font-weight: bold;
+        }
+
+        ul {
+            padding-left: 20px;
         }
     </style>
 </head>
@@ -171,32 +142,20 @@
     <section>
         <h2>Elite Academic Consulting</h2>
         <p>Providing premium STEM mentorship for students in Kitsilano and worldwide. Focused on Physics, Thermodynamics, and Oxbridge preparation.</p>
-            <ul>
-                <li>AP/IB Physics & Calculus</li>
-                <li>Thermodynamics & Phase Equilibria</li>
-                <li>Metallurgy & Materials Science</li>
-            </ul>
-        </div>
+        <ul>
+            <li>AP/IB Physics & Calculus</li>
+            <li>Thermodynamics & Phase Equilibria[cite: 1]</li>
+            <li>Metallurgy & Materials Science[cite: 1]</li>
+        </ul>
     </section>
 
     <div class="contact-card">
         <h3>Contact Information</h3>
-        <p>Currently accepting in-person clients in Vancouver (Kitsilano/UBC) and worldwide via Zoom.</p>
-        <p>Email: <a href="mailto:nandlucas99gmail.com">nandlucas99gmail.com</a></p>
+        <p>Currently accepting in-person clients in Vancouver (Kitsilano/UBC) and worldwide via Zoom[cite: 1].</p>
+        <p>Email: <a href="mailto:nandlucas99@gmail.com">nandlucas99@gmail.com</a></p>
         <p>Phone: <a href="tel:+16138160059">+1 (613) 816-0059</a></p>
     </div>
 </div>
-
-<script>
-    var acc = document.getElementsByClassName("accordion");
-    for (var i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var panel = this.nextElementSibling;
-            panel.style.display = (panel.style.display === "block") ? "none" : "block";
-        });
-    }
-</script>
 
 </body>
 </html>
