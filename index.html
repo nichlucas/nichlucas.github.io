@@ -204,6 +204,40 @@
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
+
+    .availability-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+.status-circle {
+    width: 10px;
+    height: 10px;
+    background-color: #2ecc71; /* Professional Emerald Green */
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.7);
+    animation: pulse-green 2s infinite;
+}
+
+@keyframes pulse-green {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.7);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(46, 204, 113, 0);
+    }
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(46, 204, 113, 0);
+    }
+}
     </style>
 </head>
 <body>
@@ -228,7 +262,7 @@
 
     <section>
         <h2>Academic Mentorship and Premium Tutoring</h2>
-        <p>My tutoring experience primarily comes from my time as a PhD researcher at the University of Cambridge (2021-2025), where I worked with over 100 undergraduate students in tutorials, laboratory sessions and during field studies. I provided small-group "supervisions" &mdash; a hallmark of the Oxbridge system &mdash; designed for personalized guidance, foster deep subject understanding, and develop critical thinking beyond the core lecture material. I have helped students falling behind and those already excelling, and I've learned a lot in the process.
+        <p>My tutoring experience primarily comes from my time as a PhD researcher at the University of Cambridge (2021-2025), where I worked with over 100 undergraduate students in tutorials, laboratory sessions and during field studies. I provided small-group "supervisions"&mdash;a hallmark of the Oxbridge system&mdash;designed for personalized guidance, foster deep subject understanding, and develop critical thinking beyond the core lecture material. I have helped students falling behind and those already excelling, and I've learned a lot in the process.
         <div>
         <p>I provide premium tutoring up to the graduate level as well as university admissions coaching and interview preparation. Whether you're falling behind, reaching for top grades or just needing some guidance, I can help you. I'm currently accepting in-person clients in Vancouver (Kitsilano/UBC) and worldwide via Zoom.</p>
         </div>
@@ -240,18 +274,22 @@
             <li>Feedback on written work in science/engineering</li>
         </ul>
         <h3>Key Information</h3>
+        <ul>
             <li>Free 15 minute consultation</li>
-            <li><strong>Sessional rate:</strong>: $100/hr</li>
-            <li><strong>5-hour bundle:</strong>: $95/hr ($475)</li>
-            <li><strong>10-hour bundle:</strong>: $90/hr ($900)</li>
-            <li><strong>20-hour bundle:</strong>: $80/hr ($1600)</li>        
-            <li><strong>Delivery:</strong>: in person at the University of British Columbia or over Zoom/Teams; in-home visits are possible for +$30/session</li>
-            <li><strong>Availability:</strong>: open</li>
+            <li><strong>Sessional rate</strong>: $100/hr</li>
+            <li><strong>5-hour bundle</strong>: $95/hr ($475)</li>
+            <li><strong>10-hour bundle</strong>: $90/hr ($900)</li>
+            <li><strong>20-hour bundle</strong>: $80/hr ($1600)</li>        
+            <li><strong>Delivery</strong>: in person at the University of British Columbia or over Zoom/Teams; in-home visits are possible for +$30/session</li>
+        </ul>
+            <p class="availability-status">
+                <strong>Availability:</strong> open <span class="status-circle"></span>
+</p>
     </section>
 
     <div class="inquiry-container">
             <a href="mailto:nandlucas99@gmail.com?subject=Tutoring Inquiry" class="inquiry-button">
-            Inquire for Availability
+            Book a Consultation
     </a>
     </div>
 
