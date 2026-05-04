@@ -214,28 +214,33 @@
     margin-top: 20px;
 }
 
+.availability-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+}
+
 .status-circle {
     width: 10px;
     height: 10px;
-    background-color: #2ecc71; /* Professional Emerald Green */
+    background-color: #2ecc71; /* Emerald Green */
+    border: 1px solid #000;    /* Thin black border */
     border-radius: 50%;
     display: inline-block;
-    box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.7);
-    animation: pulse-green 2s infinite;
+    /* Soft static glow */
+    box-shadow: 0 0 5px rgba(46, 204, 113, 0.8); 
+    animation: gentle-glow 3s ease-in-out infinite;
 }
 
-@keyframes pulse-green {
-    0% {
-        transform: scale(0.95);
-        box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.7);
+@keyframes gentle-glow {
+    0%, 100% {
+        box-shadow: 0 0 3px rgba(46, 204, 113, 0.4);
+        filter: brightness(1);
     }
-    70% {
-        transform: scale(1);
-        box-shadow: 0 0 0 10px rgba(46, 204, 113, 0);
-    }
-    100% {
-        transform: scale(0.95);
-        box-shadow: 0 0 0 0 rgba(46, 204, 113, 0);
+    50% {
+        box-shadow: 0 0 10px rgba(46, 204, 113, 0.9);
+        filter: brightness(1.2);
     }
 }
     </style>
@@ -282,8 +287,8 @@
             <li><strong>20-hour bundle</strong>: $80/hr ($1600)</li>        
             <li><strong>Delivery</strong>: in person at the University of British Columbia or over Zoom/Teams; in-home visits are possible for +$30/session</li>
         </ul>
-            <p class="availability-status">
-                <strong>Availability:</strong> open <span class="status-circle"></span>
+<p class="availability-status">
+    Availability: <strong>Open</strong> <span class="status-circle"></span>
 </p>
     </section>
 
